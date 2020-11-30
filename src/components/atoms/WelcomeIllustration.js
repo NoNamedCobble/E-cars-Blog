@@ -18,7 +18,7 @@ const Wrapper = styled.picture`
     z-index: -5;
     transform: skew(-15deg) scale(1.2, 1.2);
 
-    animation: showPicture 1s ease;
+    animation: showPicture 1s ease infinite alternate;
   }
 
   @keyframes showPicture {

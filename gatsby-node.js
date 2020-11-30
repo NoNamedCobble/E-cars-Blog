@@ -22,7 +22,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   postQuery.data.api.blogPosts.forEach(blogPost => {
     createPage({
-      path: blogPost.slug,
+      path: 'articles/' + blogPost.slug,
       component: postTemplate,
       context: {
         data: blogPost,
