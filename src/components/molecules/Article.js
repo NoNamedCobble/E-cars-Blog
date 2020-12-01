@@ -15,7 +15,7 @@ const Wrapper = styled.article`
     left: -3%;
     top: 8%;
     width: 100%;
-    height: 100%;
+    height: 102%;
     background: transparent;
     border: 3px solid ${({ theme }) => theme.primary};
     transition: 0.3s cubic-bezier(0.24, 0.11, 0, 2.04);
@@ -65,6 +65,13 @@ const Description = styled.div`
   }
 `;
 
+const StyledLink = styled(Link)`
+  position: relative;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 999;
+`;
+
 const Article = ({ title, slug, description, pictureLink, date }) => (
   <Wrapper>
     <StyledPicture url={pictureLink} />
@@ -72,9 +79,7 @@ const Article = ({ title, slug, description, pictureLink, date }) => (
       <Heading>{title}</Heading>
       <Date>{date}</Date>
       <p> {description.text}</p>
-      <Link to={slug}>
-        <strong> READ MORE</strong>
-      </Link>
+      <StyledLink to={slug}>READ MORE</StyledLink>
     </Description>
   </Wrapper>
 );
