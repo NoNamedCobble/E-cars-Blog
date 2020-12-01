@@ -31,7 +31,9 @@ const ArticlesList = () => (
         }
       `}
       render={({ api: { blogPosts } }) =>
-        blogPosts.map(({ id, ...props }) => <Article key={id} {...props} />)
+        blogPosts
+          .sort((a, b) => new Date(b.date) - new Date(a.date))
+          .map(({ id, ...props }) => <Article key={id} {...props} />)
       }
     />
   </Wrapper>

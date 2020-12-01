@@ -8,6 +8,7 @@ const Wrapper = styled.article`
   position: relative;
   width: 340px;
   min-height: 420px;
+  margin-bottom: 7rem;
 
   &::before {
     content: '';
@@ -25,6 +26,17 @@ const Wrapper = styled.article`
     &::before {
       z-index: 99;
       transform: translate(3%, -8%);
+      animation: bipBop 1s 0.3s infinite alternate;
+    }
+  }
+
+  @keyframes bipBop {
+    from {
+      opacity: 1;
+    }
+
+    to {
+      opacity: 0;
     }
   }
 `;
