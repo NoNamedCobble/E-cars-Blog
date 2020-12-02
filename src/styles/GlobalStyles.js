@@ -18,17 +18,7 @@ body{
     margin:0;
     font-size:2rem;
     font-family:'Montserrat';
-
-    /* &::after{
-        content:'';
-        position:absolute;
-        left:0;
-        top:0;
-        width:55vw;
-        height:100vh;
-        background-color:${({ theme }) => theme.primary};
-        z-index:-5;
-    } */
+    overflow-x:hidden;
 }
 
 a{

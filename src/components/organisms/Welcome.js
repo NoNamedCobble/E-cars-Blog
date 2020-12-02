@@ -15,8 +15,8 @@ const Wrapper = styled.main`
     position: absolute;
     left: 0%;
     bottom: 0%;
-    width: 1080px;
-    height: 260px;
+    width: 40vw;
+    height: 20vh;
     clip-path: polygon(0 100%, 0 0, 100% 100%);
     background-color: ${({ theme }) => theme.tertiary};
     z-index: 5;
