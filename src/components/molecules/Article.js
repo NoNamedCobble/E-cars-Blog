@@ -19,7 +19,7 @@ const Wrapper = styled.article`
     left: -3%;
     top: 8%;
     width: 100%;
-    height: 102%;
+    height: 100%;
     background: transparent;
     border: 3px solid ${({ theme }) => theme.primary};
     transition: 0.3s cubic-bezier(0.24, 0.11, 0, 2.04);

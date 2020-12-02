@@ -12,6 +12,7 @@ exports.createPages = async ({ graphql, actions }) => {
           id
           title
           slug
+          pictureLink
           description {
             text
           }
