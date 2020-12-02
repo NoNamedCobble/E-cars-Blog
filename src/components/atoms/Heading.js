@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-const StyledHeading = styled.h1`
+const StyledHeading = styled.h2`
   position: relative;
   z-index: 2;
   color: ${({ theme }) => theme.primary};
