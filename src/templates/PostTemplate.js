@@ -19,6 +19,10 @@ const StyledIcon = styled(IoChevronBackCircleSharp)`
   width: 50px;
   height: 50px;
   color: ${({ theme }) => theme.primary};
+
+  &:active {
+    color: ${({ theme }) => theme.secondary};
+  }
 `;
 
 const StyledPicture = styled.picture`

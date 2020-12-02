@@ -2,7 +2,7 @@ const theme = {
   primary: 'hsla(203, 99%, 48%, 1)',
   secondary: 'hsla(203, 99%, 48%, 0.25)',
   tertiary: 'white',
-  quaternary: 'hsl(0,0%,90%)',
+  quaternary: 'hsl(0,0%,92%)',
 
   warning: {
     color: '#161616',

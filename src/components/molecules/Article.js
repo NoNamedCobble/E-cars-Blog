@@ -87,15 +87,40 @@ const StyledLink = styled(Link)`
   z-index: 999;
   margin-top: 5px;
 `;
+const StyledSpan = styled.span`
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5%;
+    height: 2px;
+    width: 0px;
+    transition: 0.3s ease;
+    background-color: black;
+  }
+
+  &:hover {
+    &::after {
+      width: 100%;
+    }
+  }
+`;
 
 const Article = ({ title, slug, description, pictureLink, date }) => (
   <Wrapper>
     <StyledImg src={pictureLink} alt={title} />
     <Description>
-      <Date>{date}</Date>
+      <Date>
+        {date.replace(/(\d{4})-(\d{1,2})-(\d{1,2})/, function (match, y, m, d) {
+          return d + '-' + m + '-' + y;
+        })}
+      </Date>
       <Heading>{title}</Heading>
       {description.text}
-      <StyledLink to={slug}>READ MORE</StyledLink>
+      <StyledLink to={slug}>
+        <StyledSpan>READ MORE</StyledSpan>
+      </StyledLink>
     </Description>
   </Wrapper>
 );

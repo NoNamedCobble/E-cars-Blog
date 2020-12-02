@@ -26,6 +26,7 @@ a{
     color:inherit;
 }
 
+
 `;
 
 export default GlobalStyles;
