@@ -3,8 +3,7 @@ import { Link } from 'gatsby';
 import styled from 'styled-components';
 import { BsBatteryCharging } from 'react-icons/bs';
 import Heading from 'src/components/atoms/Heading';
-
-import { globalHistory } from '@reach/router';
+import { useLocation } from '@reach/router';
 
 const StyledHeading = styled(Heading)`
   display: flex;
@@ -17,7 +16,7 @@ const Icon = styled(BsBatteryCharging)`
 `;
 
 const Logo = () => {
-  const path = globalHistory.location.pathname;
+  const path = useLocation().pathname;
   return (
     <Link to="/">
       <StyledHeading path={path} isMain>
